@@ -16,6 +16,7 @@ class Profile extends Component {
         // console.log(this.props.user);
         actions.getuserdata()
         .then(res => {
+          console.log(res);
           this.setState({ profile: res.data.user });
           console.log(this.state.profile)
         }).catch(({ error }) => console.error(error.data));

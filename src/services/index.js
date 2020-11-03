@@ -1,11 +1,17 @@
 import axios from 'axios';
 let baseURL;
 
-process.env.NODE_ENV === 'production'
-  // ? (baseURL = 'https://sheltered-dawn-07708.herokuapp.com')
-  ? (baseURL = 'https://hire-my-dev-backend.herokuapp.com')
-  : (baseURL = 'http://localhost:5000');
+// process.env.NODE_ENV === 'production'
+//   // ? (baseURL = 'https://sheltered-dawn-07708.herokuapp.com')
+//   ? (baseURL = 'https://hire-my-dev-backend.herokuapp.com')
+//   : (baseURL = 'https://hire-my-dev-backend.herokuapp.com');
 
+/**CHANGE THIS**/
+process.env.NODE_ENV === 'production'
+  ? (baseURL = '/api')  
+  : (baseURL = 'http://localhost:5000/api');  
+/****/  
+console.log(baseURL);
 const service = axios.create({ withCredentials: true, baseURL });
 
 const actions = {

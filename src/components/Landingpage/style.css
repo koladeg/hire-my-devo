@@ -66,7 +66,10 @@
   .carousel .background {
     background-size: cover; /* To make the background image looks good */
   }
+  
 }
+
+
 
 .carousel .background.a {
   background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
@@ -222,4 +225,11 @@
 #features h4 {
   color: #ED1C24;
   font-size: large;
+}
+
+@media screen and (max-width:801px) {
+  .contain{
+    flex-direction: column;
+    margin: 0 100px;
+  }
 }
